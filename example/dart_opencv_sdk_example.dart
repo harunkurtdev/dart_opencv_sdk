@@ -2,9 +2,6 @@ import 'package:dart_opencv_sdk/dart_opencv_sdk.dart';
 import 'package:image/image.dart' as img;
 
 void main() async {
-  var awesome = Awesome();
-  print('awesome: ${awesome.isAwesome}');
-  
   await (img.Command()
         // Read a WebP image from a file.
         ..decodeWebPFile('test.webp')

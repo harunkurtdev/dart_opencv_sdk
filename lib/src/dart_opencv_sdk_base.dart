@@ -1,7 +1,5 @@
-// TODO: Put public facing types in this file.
+import 'package:image/image.dart';
 
-/// Checks if you are awesome. Spoiler: you are.
-class Awesome {
-  bool get isAwesome => true;
+abstract class Images implements Iterable<Command> {
+  
 }
-
