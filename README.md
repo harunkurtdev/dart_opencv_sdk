@@ -1,22 +1,58 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
-
 TODO: Put a short description of the package here that helps potential users
 know whether this package might be useful for them.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+TODO:
+
+- [ ] Image Reading and Writing:
+  - [ ] Read image: `imread()`
+  - [ ] Write image: `imwrite()`
+
+- [ ] Image Properties:
+  - [ ] Get image size: `size()`
+  - [ ] Determine image type: `type()`
+  - [ ] Access and modify pixel values on the image: `at()`, `set()`
+
+- [ ] Color Conversions:
+  - [ ] Convert color spaces: `cvtColor()`
+  - [ ] Define constants for color space conversions: `COLOR_*`
+
+- [ ] Filtering and Edge Detection:
+  - [ ] Gaussian blur: `GaussianBlur()`
+  - [ ] Median blur: `medianBlur()`
+  - [ ] Edge detection: `Canny()`
+  - [ ] Histogram equalization: `equalizeHist()`
+
+- [ ] Geometric Transformations:
+  - [ ] Perspective transformation: `warpPerspective()`
+  - [ ] Scaling: `resize()`
+  - [ ] Rotation: `rotate()`
+
+- [ ] Template Matching:
+  - [ ] Template matching operation: `matchTemplate()`
+
+- [ ] Contour Detection:
+  - [ ] Contour detection: `findContours()`
+  - [ ] Compute contour properties: `contourArea()`, `arcLength()`, `boundingRect()`
+
+- [ ] Object Detection:
+  - [ ] Face detection: `CascadeClassifier()`
+  - [ ] Object detection: `detectMultiScale()`
+
+- [ ] Computational Operations:
+  - [ ] Mathematical operations: `add()`, `subtract()`, `multiply()`, `divide()`
+  - [ ] Histogram calculation: `calcHist()`
+
+- [ ] Image Processing Helpers:
+  - [ ] Bitwise masking operations: `bitwise_and()`, `bitwise_or()`, `bitwise_not()`
+  - [ ] Splitting and merging images: `split()`, `merge()`
+  - [ ] Defining Regions of Interest (ROI): `Rect()`
+
+- [ ] Graphical User Interface (GUI) Helpers:
+  - [ ] Display image on the screen: `imshow()`
+  - [ ] Detect keyboard or mouse interactions: `waitKey()`
+
 
 ## Getting started
 

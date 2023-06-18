@@ -8,8 +8,6 @@ void main() {
   final image = decodeImage(File('thumbnail_normalize.png').readAsBytesSync())!;
   final filteredImage = laplaceFilter(image);
   File('filtered_resim.jpg').writeAsBytesSync(encodeJpg(filteredImage));
-
-
 }
 
 Image laplaceFilter(Image image) {
