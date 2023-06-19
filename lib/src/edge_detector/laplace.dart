@@ -1,15 +1,18 @@
 import 'package:image/image.dart';
 
-import 'filter.dart';
-
+import '../core/functions.dart';
+import '../filter/filter.dart';
 
 // https://docs.opencv.org/3.4/d5/db5/tutorial_laplace_operator.html
 class LaplaceFilter extends ImageFilter {
+  final CoreFunctions coreFunctions;
   final List<List<int>> laplaceKernel = [
     [0, 1, 0],
     [1, -4, 1],
     [0, 1, 0]
   ];
+
+  LaplaceFilter() : coreFunctions = CoreFunctions();
 
   @override
   Image applyFilter(Image image) {
@@ -21,7 +24,7 @@ class LaplaceFilter extends ImageFilter {
 
         final filteredPixel = sum.clamp(0, 255).toInt();
         final filteredColor =
-            getColor(filteredPixel, filteredPixel, filteredPixel);
+            ColorFloat64.rgb(filteredPixel, filteredPixel, filteredPixel);
         filteredImage.setPixel(x, y, filteredColor);
       }
     }
@@ -34,7 +37,7 @@ class LaplaceFilter extends ImageFilter {
 
     for (var ky = -1; ky <= 1; ky++) {
       for (var kx = -1; kx <= 1; kx++) {
-        final pixel = getPixelSafer(image, x + kx, y + ky);
+        final pixel = coreFunctions.getPixelSafer(image, x + kx, y + ky);
         final kernelValue = laplaceKernel[ky + 1][kx + 1];
         final r = pixel.r;
         final g = pixel.g;

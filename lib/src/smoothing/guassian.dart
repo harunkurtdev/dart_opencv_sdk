@@ -1,16 +1,20 @@
 import 'package:image/image.dart';
-
-import 'filter.dart';
 import 'dart:math';
 
+import '../core/functions.dart';
+import 'smooth.dart';
+
 // https://docs.opencv.org/4.x/d4/d13/tutorial_py_filtering.html
-class GaussianBlurFilter implements ImageFilter {
+class GaussianBlurFilter implements SmoothFilter {
+  final CoreFunctions coreFunctions;
+
   final double sigma;
   final int radius;
   final int kernelSize;
 
   GaussianBlurFilter({this.sigma = 2.0, this.radius = 2})
-      : kernelSize = radius * 2 + 1;
+      : kernelSize = radius * 2 + 1,
+        coreFunctions = CoreFunctions();
 
   @override
   Image applyFilter(Image image) {
@@ -21,8 +25,9 @@ class GaussianBlurFilter implements ImageFilter {
     for (var y = 0; y < image.height; y++) {
       for (var x = 0; x < image.width; x++) {
         final filteredPixel = applyKernel(image, x, y, kernel);
+        // print(filteredPixel);
         filteredImage.setPixel(x, y,
-            ColorFloat16.rgb(filteredPixel, filteredPixel, filteredPixel));
+            ColorFloat64.rgb(filteredPixel, filteredPixel, filteredPixel));
       }
     }
 
@@ -67,7 +72,7 @@ class GaussianBlurFilter implements ImageFilter {
 
     for (var i = -radius; i <= radius; i++) {
       for (var j = -radius; j <= radius; j++) {
-        final pixel = getPixelSafer(image, x + j, y + i);
+        final pixel = coreFunctions.getPixelSafer(image, x + j, y + i);
         final weight = kernel[i + radius][j + radius];
         final r = pixel.r;
         final g = pixel.g;
@@ -83,7 +88,7 @@ class GaussianBlurFilter implements ImageFilter {
     final filteredG = sumG.round().clamp(0, 255).toInt();
     final filteredB = sumB.round().clamp(0, 255).toInt();
 
-    return getColors(filteredR, filteredG, filteredB);
+    return coreFunctions.getColors(filteredR, filteredG, filteredB);
   }
 
   @override

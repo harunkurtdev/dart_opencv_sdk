@@ -7,12 +7,16 @@ void main() async {
         ..decodeWebPFile('test.webp')
         // Resize the image so its width is 120 and height maintains aspect
         // ratio.
-        ..copyResize(width: 1200)
+        ..copyResize(width: 240)
+        ..copyRotate(angle: 5)
+        ..grayscale()
         // ..grayscale()
         ..drawCircle(
             x: 20, y: 50, radius: 50, color: img.ColorFloat16.rgb(255, 0, 0))
         // Save the image to a PNG file.
-        ..writeToFile('thumbnail_normalize.png'))
+        ..writeToFile('thumbnail_rotate.png'))
       // Execute the image commands in an isolate thread
       .executeThread();
+
+      
 }

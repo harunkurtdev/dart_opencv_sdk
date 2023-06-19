@@ -1,6 +1,7 @@
 import 'package:image/image.dart';
 
 class CoreFunctions {
+  
   int getRed(int color) {
     return (color >> 16) & 0xFF;
   }

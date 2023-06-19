@@ -6,28 +6,28 @@ know whether this package might be useful for them.
 TODO:
 
 - [ ] Image Reading and Writing:
-  - [ ] Read image: `imread()`
-  - [ ] Write image: `imwrite()`
+  - [X] Read image: `imread()`
+  - [X] Write image: `imwrite()`
 
 - [ ] Image Properties:
-  - [ ] Get image size: `size()`
+  - [X] Get image size: `size()`
   - [ ] Determine image type: `type()`
   - [ ] Access and modify pixel values on the image: `at()`, `set()`
 
 - [ ] Color Conversions:
-  - [ ] Convert color spaces: `cvtColor()`
+  - [X] Convert color spaces: `cvtColor()` for grayscale
   - [ ] Define constants for color space conversions: `COLOR_*`
 
 - [ ] Filtering and Edge Detection:
-  - [ ] Gaussian blur: `GaussianBlur()`
+  - [X] Gaussian blur: `GaussianBlur()`
   - [ ] Median blur: `medianBlur()`
-  - [ ] Edge detection: `Canny()`
+  - [X] Edge detection: `Canny()`
   - [ ] Histogram equalization: `equalizeHist()`
 
 - [ ] Geometric Transformations:
   - [ ] Perspective transformation: `warpPerspective()`
-  - [ ] Scaling: `resize()`
-  - [ ] Rotation: `rotate()`
+  - [X] Scaling: `resize()`
+  - [X] Rotation: `rotate()`
 
 - [ ] Template Matching:
   - [ ] Template matching operation: `matchTemplate()`
@@ -53,11 +53,6 @@ TODO:
   - [ ] Display image on the screen: `imshow()`
   - [ ] Detect keyboard or mouse interactions: `waitKey()`
 
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
 
 ## Usage
 
