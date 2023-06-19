@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:dart_opencv_sdk/src/edge_detector/canny_edge.dart';
-import 'package:dart_opencv_sdk/src/smoothing/guassian.dart';
+import 'package:dart_opencv_sdk/src/blur/guassian.dart';
 import 'package:image/image.dart';
 
 void main(List<String> args) async {

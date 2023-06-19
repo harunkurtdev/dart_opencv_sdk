@@ -2,7 +2,7 @@ import 'package:dart_opencv_sdk/src/filter/grayscale.dart';
 import 'package:image/image.dart';
 
 import '../core/functions.dart';
-import '../smoothing/guassian.dart';
+import '../blur/guassian.dart';
 import '../filter/filter.dart';
 import 'dart:math';
 

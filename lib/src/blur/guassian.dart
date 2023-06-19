@@ -2,7 +2,7 @@ import 'package:image/image.dart';
 import 'dart:math';
 
 import '../core/functions.dart';
-import 'smooth.dart';
+import 'blur.dart';
 
 // https://docs.opencv.org/4.x/d4/d13/tutorial_py_filtering.html
 class GaussianBlurFilter implements SmoothFilter {
