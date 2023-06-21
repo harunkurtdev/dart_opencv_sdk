@@ -24,14 +24,15 @@ TODO:
 
 - [ ] Filtering and Edge Detection:
   - [X] Gaussian blur: `GaussianBlur()`
-  - [X] Gaussian blur: `Average()`
-  - [X] Gaussian blur: `Bileteral()`
-  - [X] Gaussian blur: `Average()`
+  - [X] Average blur: `Average()`
+  - [X] Bileteral blur: `Bileteral()`
+  - [X] Average blur: `Average()`
   - [X] Median blur: `medianBlur()`
 
 - [ ] Edge Detection:
   - [X] Edge detection: `Canny()`
   - [X]  Laplace: `Laplace()`
+  - [X]  Sobel: `Sobel()`
 
 - [ ] Geometric Transformations:
   - [ ] Perspective transformation: `warpPerspective()`
