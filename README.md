@@ -14,15 +14,24 @@ TODO:
   - [ ] Determine image type: `type()`
   - [ ] Access and modify pixel values on the image: `at()`, `set()`
 
+- [ ] Morphological Operation:
+  - [X] Eroding ![](./example/morphological/morphological_erode.png)
+  - [X] Dilate ![](./example/morphological/morphological_dilate.png)
+
 - [ ] Color Conversions:
   - [X] Convert color spaces: `cvtColor()` for grayscale
   - [ ] Define constants for color space conversions: `COLOR_*`
 
 - [ ] Filtering and Edge Detection:
   - [X] Gaussian blur: `GaussianBlur()`
-  - [ ] Median blur: `medianBlur()`
+  - [X] Gaussian blur: `Average()`
+  - [X] Gaussian blur: `Bileteral()`
+  - [X] Gaussian blur: `Average()`
+  - [X] Median blur: `medianBlur()`
+
+- [ ] Edge Detection:
   - [X] Edge detection: `Canny()`
-  - [ ] Histogram equalization: `equalizeHist()`
+  - [X]  Laplace: `Laplace()`
 
 - [ ] Geometric Transformations:
   - [ ] Perspective transformation: `warpPerspective()`
