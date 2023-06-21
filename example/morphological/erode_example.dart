@@ -7,7 +7,7 @@ import 'package:image/image.dart';
 void main(List<String> args) {
   Image image = decodeImage(File('morphological.png').readAsBytesSync())!;
 
-  final dilating = Eroding(iterations: 5);
+  final dilating = Eroding(iterations: 3);
   final dilatedImage = dilating.applyFilter(image);
 
   File('morphological_erode.png').writeAsBytesSync(encodeJpg(dilatedImage));
