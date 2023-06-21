@@ -48,13 +48,10 @@ class CannyEdgeFilter implements ImageFilter {
       [1, 2, 1],
     ];
 
-    final gradients = [[]] as List<List<double>>;
-    for (var x = 0; x < image.width; x++) {
-      gradients[x] = [] as List<double>;
-      for (var y = 0; y < image.height; y++) {
-        gradients[x][y] = 0;
-      }
-    }
+    final gradients = List.generate(
+      image.width,
+      (_) => List<double>.filled(image.height, 0),
+    );
 
     for (var y = 1; y < image.height - 1; y++) {
       for (var x = 1; x < image.width - 1; x++) {
@@ -77,7 +74,7 @@ class CannyEdgeFilter implements ImageFilter {
     return gradients;
   }
 
-  Image applyNonMaximaSuppression(Image image, List<List<double>> gradients) {
+  Image applyNonMaximaSuppression(Image image, List<List<dynamic>> gradients) {
     final suppressedImage = Image(width: image.width, height: image.height);
 
     for (var y = 1; y < image.height - 1; y++) {
@@ -96,8 +93,11 @@ class CannyEdgeFilter implements ImageFilter {
 
         final interpolatedValue = interpolate(pixelValue.toInt(),
             neighbor1Value.toInt(), neighbor2Value.toInt(), direction);
-        suppressedImage.setPixel(x, y,
-            getColor(interpolatedValue, interpolatedValue, interpolatedValue));
+        suppressedImage.setPixel(
+            x,
+            y,
+            ColorFloat64.rgb(
+                interpolatedValue, interpolatedValue, interpolatedValue));
       }
     }
 
@@ -126,11 +126,11 @@ class CannyEdgeFilter implements ImageFilter {
         final pixelValue = pixel.r;
 
         if (pixelValue >= highThreshold) {
-          thresholdedImage.setPixel(x, y, getColor(255, 255, 255));
+          thresholdedImage.setPixel(x, y, ColorFloat64.rgb(255, 255, 255));
         } else if (pixelValue >= lowThreshold) {
-          thresholdedImage.setPixel(x, y, getColor(128, 128, 128));
+          thresholdedImage.setPixel(x, y, ColorFloat64.rgb(128, 128, 128));
         } else {
-          thresholdedImage.setPixel(x, y, getColor(0, 0, 0));
+          thresholdedImage.setPixel(x, y, ColorFloat64.rgb(0, 0, 0));
         }
       }
     }
@@ -161,12 +161,12 @@ class CannyEdgeFilter implements ImageFilter {
               neighbor2Value == 255 ||
               neighbor3Value == 255 ||
               neighbor4Value == 255) {
-            edgeImage.setPixel(x, y, getColor(255, 255, 255));
+            edgeImage.setPixel(x, y, ColorFloat64.rgb(255, 255, 255));
           } else {
-            edgeImage.setPixel(x, y, getColor(0, 0, 0));
+            edgeImage.setPixel(x, y, ColorFloat64.rgb(0, 0, 0));
           }
         } else {
-          edgeImage.setPixel(x, y, getColor(0, 0, 0));
+          edgeImage.setPixel(x, y, ColorFloat64.rgb(0, 0, 0));
         }
       }
     }

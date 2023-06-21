@@ -39,6 +39,10 @@ TODO:
   - [X] Scaling: `resize()`
   - [X] Rotation: `rotate()`
 
+- [X] Hough Detection Transformations:
+  - [X] Hough Circle:
+  - [X] Hough Line: 
+
 - [ ] Template Matching:
   - [ ] Template matching operation: `matchTemplate()`
 

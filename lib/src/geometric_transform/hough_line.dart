@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:dart_opencv_sdk/src/edge_detector/canny_edge.dart';
 import 'package:dart_opencv_sdk/src/filter/grayscale.dart';
 import 'package:image/image.dart';
@@ -6,15 +8,20 @@ import 'dart:math';
 class HoughLineTransform {
   List<Line> detectLines(Image image) {
     final edges = applyCannyEdgeDetection(image);
+
     final lines = performHoughTransform(edges);
     return lines;
   }
 
   Image applyCannyEdgeDetection(Image image) {
-    final cannyEdgeFilter = CannyEdgeFilter();
+    final cannyEdgeFilter =
+        CannyEdgeFilter(lowThreshold: 10, highThreshold: 100, sigma: 2);
+    File('line_detect_canny.jpg')
+        .writeAsBytesSync(encodeJpg(cannyEdgeFilter.applyFilter(image)));
     return cannyEdgeFilter.applyFilter(image);
   }
 
+  // TODO: bu sınıfa ait circle detect etme kısmı başarısız
   List<Line> performHoughTransform(Image image) {
     final lines = <Line>[];
 
@@ -30,7 +37,7 @@ class HoughLineTransform {
         final pixel = image.getPixel(x, y);
         final pixelValue = pixel.r;
 
-        if (pixelValue == 255) {
+        if (pixelValue > 0) {
           for (var theta = 0; theta < 180; theta++) {
             final angle = theta * (pi / 180);
             final rho = x * cos(angle) + y * sin(angle);
@@ -75,9 +82,19 @@ class HoughLineTransform {
       final endPoint = line.endPoint;
 
       // Çizginin tüm piksellerini işaretleme
+      // if ((startPoint.x <= endPoint.x) && (startPoint.y <= endPoint.y)) {
+
+      //     marker = drawLine(image,
+      //         x1: line.startPoint.x,
+      //         y1: line.startPoint.y,
+      //         x2: line.endPoint.x,
+      //         y2: line.endPoint.y,
+      //         color: ColorFloat64.rgb(255, 0, 0));
+
+      // }
       for (var x = startPoint.x; x <= endPoint.x; x++) {
         for (var y = startPoint.y; y <= endPoint.y; y++) {
-          image.setPixel(
+          marker.setPixel(
               x, y, ColorFloat64.rgb(255, 0, 0)); // Kırmızı renkte işaretleme
         }
       }
