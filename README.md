@@ -1,7 +1,17 @@
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+# OpenCV SDK for Dart
+
+The OpenCV SDK for Dart is a powerful and versatile computer vision library that allows developers to integrate OpenCV functionality into their Dart applications. This SDK provides a bridge between Dart and the OpenCV library, enabling you to leverage advanced computer vision techniques seamlessly.
 
 ## Features
+
+- **High-Performance:** Benefit from the high-performance capabilities of the OpenCV library directly from your Dart applications.
+
+- **Wide Range of Algorithms:** Access a comprehensive collection of image processing and computer vision algorithms, including filtering, feature detection, object tracking, and more.
+
+- **Easy Integration:** The SDK provides a user-friendly interface to easily integrate OpenCV functionalities into your Dart projects.
+
+
+## TODO
 
 TODO:
 
@@ -72,13 +82,3 @@ TODO:
 
 TODO: Include short and useful examples for package users. Add longer examples
 to `/example` folder. 
-
-```dart
-const like = 'sample';
-```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
