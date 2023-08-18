@@ -1,9 +1,45 @@
-<mxfile host="app.diagrams.net" modified="2023-08-18T06:50:13.635Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0" version="21.6.8" etag="xMjbPMsmQ54fdU8jlNNZ" type="github">
+<mxfile host="app.diagrams.net" modified="2023-08-18T07:24:45.664Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0" etag="NuG9Ue0cHLswIMyuVRp7" version="21.6.8" type="github">
   <diagram name="Page-1" id="bbNpDcok5v9fHwa2r4f9">
-    <mxGraphModel>
+    <mxGraphModel dx="2210" dy="795" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="l80OdfhFsxBuSlyoFw---1" value="opencv_core_sdk" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l80OdfhFsxBuSlyoFw---6" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="-460" y="60" width="290" height="132" as="geometry" />
+        </mxCell>
+        <mxCell id="l80OdfhFsxBuSlyoFw---4" value="" style="rounded=1;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="l80OdfhFsxBuSlyoFw---6">
+          <mxGeometry y="32" width="290" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="l80OdfhFsxBuSlyoFw---5" value="Our class" style="text;html=1;align=center;verticalAlign=middle;resizable=1;points=[];autosize=1;strokeColor=none;fillColor=none;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="l80OdfhFsxBuSlyoFw---6">
+          <mxGeometry x="110" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="l80OdfhFsxBuSlyoFw---7" value="morphological" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-120" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l80OdfhFsxBuSlyoFw---8" value="edge detection" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l80OdfhFsxBuSlyoFw---9" value="&lt;div&gt;filter&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l80OdfhFsxBuSlyoFw---10" value="blur" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l80OdfhFsxBuSlyoFw---11" value="&lt;div&gt;qr&amp;amp;bar_code&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l80OdfhFsxBuSlyoFw---12" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="20" y="30" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="l80OdfhFsxBuSlyoFw---2" value="image" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="l80OdfhFsxBuSlyoFw---12">
+          <mxGeometry y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l80OdfhFsxBuSlyoFw---3" value="Depends" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="l80OdfhFsxBuSlyoFw---12">
+          <mxGeometry x="25" width="70" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
